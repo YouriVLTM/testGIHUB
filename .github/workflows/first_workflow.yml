@@ -24,6 +24,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}        
         port: 7685
         script: |
-          mkdir githubyoufolder
+          cd /home/u41128p36599/domains/yourivanlaer.be/public_html/gitlab
+          git pull
 
 
