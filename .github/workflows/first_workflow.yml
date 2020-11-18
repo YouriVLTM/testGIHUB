@@ -6,8 +6,10 @@ name: Deployment workflow
 # events but only for the main branch
 on:
   push:
-    branches: [ master ]
-
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   job_one:
