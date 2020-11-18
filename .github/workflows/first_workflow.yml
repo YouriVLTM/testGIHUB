@@ -9,7 +9,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-    
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   job_one:
@@ -20,8 +20,8 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: yourivanlaer.be
-        username: u41128p36599
-        key: ${{ secrets.OMG_SECRET }}
+        username: ${{ secrets.USERNAME }} 
+        password: ${{ secrets.PASSWORD }}        
         port: 7685
         script: |
           mkdir githubyoufolder
