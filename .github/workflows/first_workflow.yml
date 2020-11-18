@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deployment workflow
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: testing server ssh connnection 
+      uses: appleboy/ssh-action@master
+      with:
+        host: yourivanlaer.be
+        username: u41128p36599
+        key: ${{ secrets.OMG_SECRET }}
+        port: 7685
+        script: |
+          mkdir githubyoufolder
+
+
