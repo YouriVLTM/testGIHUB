@@ -19,12 +19,12 @@ jobs:
     - name: testing server ssh connnection 
       uses: appleboy/ssh-action@master
       with:
-        host: yourivanlaer.be
+        host: ${{ secrets.HOSTNAME }}    
         username: ${{ secrets.USERNAME }} 
         password: ${{ secrets.PASSWORD }}        
         port: 7685
         script: |
-          cd /home/u41128p36599/domains/yourivanlaer.be/public_html/gitlab
+          cd ${{ secrets.FOLDER }}
           git pull
 
 
